@@ -55,7 +55,7 @@ def split_message(message_content, min_length=1500):
 
 
 async def async_chat_completion(*args, **kwargs):
-    return await asyncio.to_thread(openai.chat.completions.create, *args, **kwargs)
+    return await asyncio.to_thread(openai.ChatCompletion.create, *args, **kwargs)
 
 
 async def fetch_message_history(channel):
